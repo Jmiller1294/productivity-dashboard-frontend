@@ -6,6 +6,8 @@ export const Grid = styled.div`
 
 export const Row = styled.div`
   display: flex;
+  justify-content: ${ (props) => props.justify};
+  margin: ${ (props) => props.margin};
   min-height: ${ (props) => props.minHeight};
   height: ${ (props) => props.height};
   background: ${ (props) => props.background};
@@ -14,4 +16,5 @@ export const Row = styled.div`
 
 export const Col = styled.div`
   flex: ${ (props) => props.size};
+  margin: ${ (props) => props.margin};
 `

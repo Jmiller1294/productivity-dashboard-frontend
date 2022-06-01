@@ -24,7 +24,7 @@ const App = () => {
           <Col size={1}>
             <SideBar />
           </Col>
-          <Col size={4}>
+          <Col size={15}>
             <Routes>
               <Route exact path='/' element={<Home />}/>
             </Routes>

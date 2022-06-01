@@ -3,18 +3,17 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  background: red;
+  background: #212121;
   flex-basis: 100%;
-  height: 250px;
+  height: ${ (props) => props.height};
   border-radius: 20px;
   padding: 10px;
-  margin: 25px 25px 0 25px;
 `
 
-const Widget = () => {
+const Widget = (props) => {
   return (
-    <Container>
-      Widget
+    <Container margin={props.margin} height={props.height}>
+      {props.title}
     </Container>
   )
 }

@@ -8,14 +8,14 @@ const Container = styled.div`
   background-color: #212121;
   color: #FFFFFF;
   height: 1000px;
-  width: 6.2%;
+  width: 100%;
 `
 
-const SideBar = () => {
+const NewsFeed = () => {
   return (
     <Container>
-      SideBar
+      NewsFeed
     </Container>
   )
 }
-export default SideBar;
+export default NewsFeed;
