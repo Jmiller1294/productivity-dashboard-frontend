@@ -12,7 +12,7 @@ const Home = () => {
           <Col size={3}>
             <Row height={'auto'} margin={'25px'}>
               <Col size={1}>
-                <Widget title={'Stocks'} height={'200px'}/>
+                <Widget title={'Tasks'} height={'200px'}/>
               </Col>
             </Row>
             <Row height={'auto'} margin={'25px'}>
@@ -39,7 +39,7 @@ const Home = () => {
                 </Row>
               </Col>
               <Col size={1} margin={'0 0 0 12px'}>
-                <Widget title={'To-Do List'} height={'325px'}/>
+                <Widget title={'Stocks'} height={'325px'}/>
               </Col>
             </Row>
           </Col>
