@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     color: #ffffff;
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    opacity: 0.8;
   } 
 `
 const App = () => {

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import homeIcon from '../assets/home.svg';
 import weatherIcon from '../assets/weather.svg';
 import chartIcon from '../assets/chart.svg';
 import calenderIcon from '../assets/calender.svg';
+import settingsIcon from '../assets/settings.svg';
 
 
 const Container = styled.div`
@@ -19,10 +20,16 @@ const Container = styled.div`
   padding: 20px 0;
 `
 const Icon = styled.img`
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   margin: 20px 0;
 `
+const SettingsIcon = styled.img`
+  height: 35px;
+  width: 35px;
+  margin: 370px 0;
+`
+
 
 const SideBar = () => {
   return (
@@ -31,6 +38,7 @@ const SideBar = () => {
       <Icon src={calenderIcon}/>
       <Icon src={weatherIcon}/>
       <Icon src={chartIcon}/>
+      <SettingsIcon src={settingsIcon}/>
     </Container>
   )
 }
