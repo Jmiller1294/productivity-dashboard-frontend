@@ -34,16 +34,30 @@ const ArticleTitle = styled.p`
   font-weight: 900;
   margin-right: 4px;
 `
+const ArticleLink = styled.a`
+  text-decoration: none;
+  color: #FFFFFF;
+
+  &:visited {
+    color: #FFFFFF;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+`
 
 const NewsFeed = (props) => {
   return (
     <Container>
      <NewsList>
         {props.articles.map((article, index) => 
-          <NewsItem key={index}>
-            <ArticleTitle>{article.title}</ArticleTitle>
-            <ArticleImg alt='article-img' src={article.urlToImage}/>
-          </NewsItem>
+          <ArticleLink href={article.url} target='_blank' alt='article-image'>
+            <NewsItem key={index}>
+              <ArticleTitle>{article.title}</ArticleTitle>
+              <ArticleImg alt='article-img' src={article.urlToImage}/>
+            </NewsItem>
+          </ArticleLink>
         )}
      </NewsList>
     </Container>

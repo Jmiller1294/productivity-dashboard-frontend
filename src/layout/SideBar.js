@@ -24,6 +24,10 @@ const Icon = styled.img`
   height: 35px;
   width: 35px;
   margin: 20px 0;
+
+  &:hover {
+    fill: white;
+  }
 `
 const SettingsIcon = styled.img`
   height: 35px;
