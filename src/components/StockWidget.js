@@ -13,6 +13,7 @@ const Container = styled.div`
 const StockWidget = (props) => {
   return (
     <Container margin={props.margin} height={props.height}>
+      {console.log(props)}
       {props.title}
     </Container>
   )

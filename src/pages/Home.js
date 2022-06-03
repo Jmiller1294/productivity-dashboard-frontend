@@ -10,7 +10,7 @@ import { Grid, Row, Col } from "../layout/Grid";
 
 const newsUrl = 'https://newsapi.org/v2/top-headlines?country=us&pageSize=10&apiKey=' 
   + process.env.REACT_APP_NEWS_API_KEY;
-const stocksUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=' 
+const stocksUrl = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=' 
   + process.env.REACT_APP_ALPHAVANTAGE_API_KEY + '&datatype=json';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=40.8115&lon=-73.9464&exclude={part}&appid=' 
   + process.env.REACT_APP_WEATHER_API_KEY
@@ -32,7 +32,7 @@ const Home = () => {
   const getStockInfo = () => {
     fetch(stocksUrl)
     .then(resp => resp.json())
-    .then(data => setStockInfo(data.articles))
+    .then(data => console.log(data))
     .catch(error => console.log(error))
   }
 
@@ -51,9 +51,9 @@ const Home = () => {
   }
 
   useEffect(() => {
-    //getArticles();
-    //getStockInfo();
-    getWeatherInfo();
+    getArticles();
+    getStockInfo();
+    //getWeatherInfo();
   }, [])
 
 
@@ -69,13 +69,13 @@ const Home = () => {
             </Row>
             <Row height={'auto'} margin={'25px'}>
               <Col size={1} margin={'0 20px 0 0'}>
-                <WeatherWidget title={'Weather'} height={'160px'} weatherInfo={weatherInfo} />
+                <WeatherWidget title={'Weather'} height={'220px'} weatherInfo={weatherInfo} />
               </Col>
               <Col size={1} margin={'0 20px 0 0'}>
-                <Widget title={'Calender'} height={'160px'}/>
+                <Widget title={'Calender'} height={'220px'}/>
               </Col>
               <Col size={1}>
-                <Widget title={'Sports'} height={'160px'}/>
+                <Widget title={'Sports'} height={'220px'}/>
               </Col>
             </Row>
             <Row height={'auto'} margin={'25px'}>
@@ -88,7 +88,7 @@ const Home = () => {
                 </Row>
               </Col>
               <Col size={1} margin={'0 0 0 12px'}>
-                <StockWidget title={'Stocks'} height={'325px'}/>
+                <StockWidget title={'Stocks'} height={'325px'} stockInfo={stockInfo}/>
               </Col>
             </Row>
           </Col>

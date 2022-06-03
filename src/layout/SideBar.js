@@ -4,6 +4,7 @@ import homeIcon from '../assets/home.svg';
 import weatherIcon from '../assets/weather.svg';
 import chartIcon from '../assets/chart.svg';
 import calenderIcon from '../assets/calender.svg';
+import listIcon from '../assets/list.svg';
 import settingsIcon from '../assets/settings.svg';
 
 
@@ -27,18 +28,19 @@ const Icon = styled.img`
 const SettingsIcon = styled.img`
   height: 35px;
   width: 35px;
-  margin: 370px 0;
+  margin: 310px 0;
 `
 
 
 const SideBar = () => {
   return (
     <Container>
-      <Icon src={homeIcon}/>
-      <Icon src={calenderIcon}/>
-      <Icon src={weatherIcon}/>
-      <Icon src={chartIcon}/>
-      <SettingsIcon src={settingsIcon}/>
+      <a href='/'><Icon src={homeIcon}/></a>
+      <a href='/calender'><Icon src={calenderIcon}/></a>
+      <a href='/weather'><Icon src={weatherIcon}/></a>
+      <a href='/stocks'><Icon src={chartIcon}/></a>
+      <a href='/list'><Icon src={listIcon}/></a>
+      <a href='/settings'><SettingsIcon src={settingsIcon}/></a>
     </Container>
   )
 }
